@@ -1,0 +1,16 @@
+{
+  "name": "the-best",
+  "version": "0.0.1",
+  "description": "",
+  "main": "node.js",
+  "scripts": {
+    "test": "server.js"
+  },
+  "author": "Firedrake969",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "nedb": "^1.7.4",
+    "socket.io": "^1.4.5"
+  }
+}

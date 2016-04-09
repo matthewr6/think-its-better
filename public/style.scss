@@ -1,0 +1,42 @@
+@import "helpers.scss";
+
+.gray-out {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+}
+
+.progress,
+.progress-bar {
+    border-radius: 0px;
+}
+
+.name-input {
+    background-color: white;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.option {
+    height: 250px;
+    line-height: 250px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ADADAD;
+    cursor: pointer;
+    font-size: 20px;
+    &:hover {
+        background-color: #E6E6E6;
+    }
+    &.disabled {
+        background-color: #E6E6E6;
+        cursor: not-allowed;
+    }
+}

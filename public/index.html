@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+</head>
+<body>
+    <div class="gray-out center--text" id="gray-background">
+        <div class="name-input center--text center--vertical" id="name-input">
+            <input class="form-control push--bottom" type="text" id="nickname" />
+            <button class="btn btn-default" id="entrance">Start playing!</button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row center--text">
+            <div class="progress">
+                <div id="progress" class="progress-bar" role="progressbar">
+                </div>
+            </div>
+        </div>
+        <div class="row center--text">
+            <div class="col-md-6 col-xs-12 push--bottom">
+                <div id="opt1" class="option disabled">
+                    Waiting for new round...
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div id="opt2" class="option disabled">
+                    Waiting for new round...
+                </div>
+            </div>
+        </div>
+        <div class="row center--text">
+            <h2 id="winner" class="hidden"></h2>
+        </div>
+        <div class="row center--text hidden" id="betting-window">
+            <h2>Bet on an outcome!  Double or nothing.</h2>
+            <h3><input id="bet" type="number" min="0" max="0" pattern="\d*" /></h3>
+            <h3><button class="btn btn-default" id="bet-button">Bet on your vote</button></h3>
+        </div>
+        <div class="row center--text">
+            <h2 id="points">0 points</h2>
+        </div>
+        <div id="leaderboard" class="row center--text">
+
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
