@@ -1,3 +1,5 @@
 node_modules
 *.map
 .sass-cache
+db.json
+things.json
